@@ -1,0 +1,32 @@
+
+<div ng-include="'tpl/include/header.html'"></div>
+
+<div class="container">
+    <div class="form-group has-feedback search">
+        <input type="text"class="form-control" ng-model="kw" placeholder="搜索鲜花名称或花语关键字..."/>
+        <span class="form-control-feedback glyphicon glyphicon-search "></span>
+    </div>
+
+    <div class="list-unstyled list-group">
+        <a href="#/detail/{{item.did}}" class="list-group-item" ng-repeat="item in dishList ">
+            <div class="media">
+                <div class="media-left media-middle">
+                    <img ng-src="img/{{item.img_sm}}" alt=""/>
+                </div>
+                <div class="media-body">
+                    <h4>{{item.name}}</h4>
+                    <p>{{item.material}}</p>
+                    <hr/>
+                    <p class="price">{{ item.price | currency:'￥' }}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <input ng-show="hasMore" type="button" class="btn btn-success btn-block"  ng-click=" loadMore()" value="加载更多"/>
+    <div ng-hide="hasMore" class="alert alert-danger alert-tishi">
+        <span class="glyphicon glyphicon-alert"></span>
+        已经没有更多数据可供加载了！
+    </div>
+
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>

@@ -1,0 +1,85 @@
+body{
+    font-family: 'SimHei' !important;
+    margin: 50px 0 100px 0;
+}
+.start{
+    margin-top:150px;
+    font-size:8em;
+}
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
+    font-family: SimHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+}
+
+
+.search{
+    margin-top:20px;
+}
+.price {
+    color: #f00;
+    padding-top: 3px;
+    font-size: 1.2em;
+}
+.alert-tishi{
+    margin-bottom:60px;
+}
+/*订单中心*/
+.order-table>tbody>tr>td{
+    vertical-align: middle;
+}
+.media-body>hr{
+    margin-top:10px;
+	margin-bottom:5px;
+}
+
+
+/*页脚*/
+.navbar-footer-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar-footer-menu li {
+    display: inline-block;
+    line-height: 50px;
+    width: 30%;
+    text-align: center;
+    cursor: pointer;
+}
+.navbar-footer-menu li:hover {
+    background: #eee;
+}
+
+
+/*定义过场动画*/
+.page {
+    position: absolute;
+    width: 100%;
+}
+.page.ng-enter,
+.page.ng-leave {
+    -webkit-transition: .5s linear all;
+    -moz-transition: .5s linear all;
+    -ms-transition: .5s linear all;
+    -o-transition: .5s linear all;
+    transition: .5s linear all;
+}
+.page.ng-leave {
+    left: 0;
+    opacity: 1;
+}
+.page.ng-leave.ng-leave-active {
+    left: -100%;
+    opacity: 0;
+}
+.page.ng-enter {
+    left: 100%;
+    opacity: 0;
+}
+.page.ng-enter.ng-enter-active {
+    left: 0;
+    opacity: 1;
+}
+body{
+    position: relative;
+    overflow-x: hidden;
+}
